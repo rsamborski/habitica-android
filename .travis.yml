@@ -11,9 +11,9 @@ before_install:
   - $CXX --version
   - export JAVA7_HOME=/usr/lib/jvm/java-7-oracle
   - export JAVA8_HOME=/usr/lib/jvm/java-8-oracle
-  - if [ $REQUIRES_SERVER ]; then nvm install 6.9.3; fi
-  - if [ $REQUIRES_SERVER ]; then nvm use 6.9.3; fi
-  - if [ $REQUIRES_SERVER ]; then npm i -g npm@4; fi
+  - if [ $REQUIRES_SERVER ]; then nvm install 10.16.0; fi
+  - if [ $REQUIRES_SERVER ]; then nvm use 10.16.0; fi
+  - if [ $REQUIRES_SERVER ]; then npm i -g npm@6; fi
   - if [ $REQUIRES_SERVER ]; then sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10; fi
   - if [ $REQUIRES_SERVER ]; then echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list; fi
   - if [ $REQUIRES_SERVER ]; then sudo apt-get update; fi
