@@ -320,4 +320,10 @@ gradle.projectsEvaluated {
 
 check { findbugs { skip true } }
 
-apply plugin: 'com.google.gms.google-services'
+if(! project.hasProperty("disableGoogleServices")) {
+    logger.info('Google Services enabled')
+    apply plugin: 'com.google.gms.google-services'
+} else {
+    logger.info('Google Services disabled')
+}
+
