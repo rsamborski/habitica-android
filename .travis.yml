@@ -61,5 +61,5 @@ env:
     - CXX=g++-4.8
     - DISABLE_REQUEST_LOGGING=true
   matrix:
-    - TEST="assembleDebug --info --stacktrace -PdisablePreDex"
+    - TEST="assembleDebug --info --stacktrace -PdisablePreDex --exclude-task processAlphaDebugGoogleServices"
 #    - TEST="testProdDebugUnitTest -PdisablePreDex --stacktrace" REQUIRES_SERVER=true
